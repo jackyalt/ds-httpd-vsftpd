@@ -37,7 +37,9 @@ docker run -p 8080:80 -p 20:20 -p 21:21 -p 9001:9001 -e USER=username -e PASSWOR
 ### Exemple per accedir als següents serveis:
 
 > Per accedir al supervisor, accedim des del navegador ex: la.teva.ip:9001
+
 > Per accedir al ftp: ftp://la.teva.ip
+
 > Per accedir al nostre servidor web: la.teva.ip:8080
 
 
