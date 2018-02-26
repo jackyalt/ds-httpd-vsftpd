@@ -52,7 +52,7 @@ sed -ri "s/iaw/${PASSWORD}/g" /config/init/supervisor_setcre.sh
 
 # Expose supervisor port
 EXPOSE 9001
-
+# To execute the script
 ENTRYPOINT ["/config/bootstrap.sh"]
 
 
