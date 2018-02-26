@@ -34,7 +34,7 @@ ENV USER=jacky
 ENV PASSWORD=iaw
 
 #Add index.html 
-ADD html/* /var/www/html
+ADD html/* /var/www/html/
 
 #Add vsftpd.conf and directory of anonymous users
 ADD vsftpd.conf /etc/vsftpd/
