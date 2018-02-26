@@ -39,6 +39,7 @@ ADD html/* /var/www/html/
 #Add vsftpd.conf and directory of anonymous users
 ADD vsftpd.conf /etc/vsftpd/
 ADD lftp /etc/
+RUN chmod 777 /lftp/pub/
 
 # Add supervisord conf, bootstrap.sh
 ADD container-files /
