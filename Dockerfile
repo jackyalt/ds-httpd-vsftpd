@@ -33,13 +33,16 @@ yum clean all && rm -rf /tmp/yum*
 ENV USER=jacky
 ENV PASSWORD=iaw
 
-#Add index.html 
+# Add index.html 
 ADD html/* /var/www/html/
 
-#Add vsftpd.conf and directory of anonymous users
+# Add vsftpd.conf and directory of anonymous users
 ADD vsftpd.conf /etc/vsftpd/
 RUN mkdir -p /var/lftp/pub
 RUN chmod -R 777 /var/lftp/pub
+
+# Add vsftpd.service file
+ADD vsftpd.service /usr/lib/systemd/system/
 
 # Add supervisord conf, bootstrap.sh
 ADD container-files /
