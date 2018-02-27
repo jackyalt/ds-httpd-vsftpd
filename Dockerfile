@@ -29,7 +29,7 @@ EXPOSE 20 21
 RUN \
 yum clean all && rm -rf /tmp/yum*
 
-# Assign environment variables to create user and password
+# Assign environment variables to create user and password (supervisor)
 ENV USER=jacky
 ENV PASSWORD=iaw
 
