@@ -3,12 +3,12 @@ MAINTAINER Jacky AT
 
 # Install supervisor
 RUN \
-yum update -y && \
-yum install -y epel-release && \
-yum install -y iproute python-setuptools hostname inotify-tools yum-utils which jq && \
-yum clean all && \
-
-easy_install supervisor
+  yum update -y && \
+  yum install -y epel-release && \
+  yum install -y iproute python-setuptools hostname inotify-tools yum-utils which jq && \
+  yum clean all && \
+  
+  easy_install supervisor
 
 # Updating system and install some basic web-related tools
 RUN \
