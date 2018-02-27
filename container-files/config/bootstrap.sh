@@ -6,14 +6,13 @@ set -u
 # VSFTPD
 
 # If no env var for FTP_USER has been specified, use 'admin':
-if [ "$FTP_USER" = "admin" ]; then
-    export FTP_USER='admin'
+if [ "$FTP_USER" = "jacky" ]; then
+    export FTP_USER='jacky'
 fi
 
 # If no env var has been specified, generate a random password for FTP_USER:
-if [ "$FTP_PASS" = "random" ]; then
-    export FTP_PASS=`cat /dev/urandom | tr -dc A-Z-a-z-0-9 | head -c${1:-16}`
-fi
+if [ "$FTP_PASSWORD" = "ftp" ]; then
+    export FTP_PASSWORD='ftp'
 
 
 # Supervisord default params
