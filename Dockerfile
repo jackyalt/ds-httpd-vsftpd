@@ -13,7 +13,7 @@ RUN \
 # Updating system and install some basic web-related tools
 RUN \
 yum update -y && \
-yum install -y wget patch tar bzip2 unzip openssh-clients MariaDB-client
+yum install -y wget patch tar bzip2 unzip MariaDB-client
 
 # Install apache server
 RUN yum update -y
