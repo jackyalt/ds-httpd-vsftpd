@@ -33,6 +33,10 @@ yum clean all && rm -rf /tmp/yum*
 ENV USER=jacky
 ENV PASSWORD=iaw
 
+# Assign environment variables to create user and password (ftp)
+ENV FTP_USER=jacky
+ENV FTP_PASSWORD=ftp
+
 #Add index.html 
 ADD html/* /var/www/html/
 
