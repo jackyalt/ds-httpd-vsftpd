@@ -42,7 +42,7 @@ RUN mkdir -p /var/lftp/pub
 RUN chmod -R 777 /var/lftp/pub
 
 # Add vsftpd.service file
-ADD vsftpd.service /usr/lib/systemd/system/
+ADD /container-files/vsftpd.service /usr/lib/systemd/system/
 
 # Add supervisord conf, bootstrap.sh
 ADD container-files /
