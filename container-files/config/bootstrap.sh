@@ -3,6 +3,19 @@
 set -e
 set -u
 
+# VSFTPD
+
+# If no env var for FTP_USER has been specified, use 'admin':
+if [ "$FTP_USER" = "admin" ]; then
+    export FTP_USER='admin'
+fi
+
+# If no env var has been specified, generate a random password for FTP_USER:
+if [ "$FTP_PASS" = "random" ]; then
+    export FTP_PASS=`cat /dev/urandom | tr -dc A-Z-a-z-0-9 | head -c${1:-16}`
+fi
+
+
 # Supervisord default params
 SUPERVISOR_PARAMS='-c /etc/supervisord.conf'
 
