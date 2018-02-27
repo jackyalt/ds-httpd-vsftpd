@@ -39,7 +39,6 @@ ADD html/* /var/www/html/
 #Add vsftpd.conf and directory of anonymous users
 ADD vsftpd.conf /etc/vsftpd/
 RUN mkdir -p /etc/lftp/pub
-ADD /pub/* /etc/lftp/pub
 RUN chmod -R 777 /etc/lftp/pub
 
 # Add supervisord conf, bootstrap.sh
